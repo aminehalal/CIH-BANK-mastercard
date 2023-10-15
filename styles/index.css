@@ -558,6 +558,10 @@ video {
   top: 8.6rem;
 }
 
+.m-2 {
+  margin: 0.5rem;
+}
+
 .mr-5 {
   margin-right: 1.25rem;
 }
@@ -620,6 +624,11 @@ video {
 
 .border-2 {
   border-width: 2px;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .bg-pink-200 {
@@ -712,7 +721,6 @@ video {
 .font-bold {
   font-weight: 700;
 }
-
 .bg-cih{
   background-image: url('../images/background.jpg');
 }

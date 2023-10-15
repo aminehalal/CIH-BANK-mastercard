@@ -7,6 +7,7 @@ eMounthYear = document.getElementById('eMounthYear');
 gender = document.getElementById('gender');
 eCardName = document.getElementById('eCardName');
 
+var genderCard = 'MR. ' ;
 gender.addEventListener('change' , function(){
     var genderCard = gender.value ;
     let theName = genderCard + eCardName.value.toUpperCase();
@@ -33,7 +34,7 @@ eCardNum.addEventListener("input", function () {
 
 eCardName.addEventListener('change' , function(){
     let theName = ""
-    theName = gender.value + eCardName.value.toUpperCase() ;
+    theName = genderCard + eCardName.value.toUpperCase() ;
     cardName.value = theName ;
 })
 
@@ -42,4 +43,26 @@ eMounthYear.addEventListener('change' , function(){
     let date = eMounthYear.value.split("-");
     let mouthYearVar = `${date[1]}/${date[0].substring(2)}`
     mounthYear.value = mouthYearVar ;
+})
+
+downLoadButton = document.getElementById('imageDownLoad');
+
+downLoadButton.addEventListener('click' , function(){
+    const targetDiv = document.querySelector('.bg-cih');
+
+    // Create a canvas element
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+
+    // Set the canvas size to match the div's size
+    canvas.width = targetDiv.offsetWidth;
+    canvas.height = targetDiv.offsetHeight;
+
+    // Convert the div's content to an image
+    html2canvas(targetDiv).then(function (canvas) {
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png');
+        link.download = 'cih_mastercard.png';
+        link.click();
+    });
 })
