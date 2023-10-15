@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Iceland&family=Kanit:wght@300;400;500&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Iceland&family=Kanit:wght@300;400;500&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:wght@300;400&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Iceland&family=Kanit:wght@300;400;500&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:wght@300;400&family=Roboto&family=Roboto+Slab:wght@500&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">    
+<title>Cih Bank Credit Card</title>
+</head>
+<body>
+
+    <div>
+        <div class="h-screen flex flex-col justify-center items-center bg-pink-200 bg-opacity-60">
+            <div class="flex flex-col bg-cih h-64 relative w-96 bg-cover rounded-xl border-2">
+                <div class="flex">
+                    <img src="images/cih_logo.png" class="h-12 mr-5 relative">
+                </div>
+                <div class="flex justify-between items-center pt-6">
+                    <img src="images/puce.png" class="h-20 pr-5">
+                    <img src="images/line.png" class="h-12 pr-4">
+                </div>
+                <div class="flex justify-center pb-4 absolute top-36 left-8">
+                    <input id="cardNum" readonly value="5509 0949 2840 2998" class="font-ice bg-transparent font-bold text-5xl">
+                    
+                </div>
+                <div class="flex justify-center pt-7">
+                    <input id="mounthYear" value="11/12" readonly class="pl-44 bg-transparent font-ice font-bold text-3xl">
+                    
+                </div>
+                <div class="flex justify-between absolute bottom-1 left-4">
+                    <div class="flex items-center">
+                        <input id="cardName" value="MR. HALAL AMINE" readonly class="bg-transparent font-ubuntu  font-bold text-xl pr-11">
+                    </div>
+                    <div>
+                    <img src="images/mastercard_logo.png" class="h-14">
+                    </div>
+                </div>
+            </div>
+            <div class="pt-5 flex justify-center flex-col items-center">
+            <div class="p-3">
+                <label class="p-2 font-bold font-robert" for="number">Card Number</label>
+                <input maxlength="16" id="eCardNum" class="h-7 rounded-lg font-ubuntu" placeholder="Your Number Card" type="text" >
+            </div>
+            <div class="p-3">
+                <label for="expirydate" class="p-2 font-robert font-bold">Expiry date</label>
+                <input id="eMounthYear" type="month" min="2023-01" class="h-7 rounded-lg font-ubuntu">
+            </div>
+            <div class="p-3">
+                <label for="gender" class="p-2 font-robert font-bold">Gender</label>
+                <select id="gender" class="font-ubuntu rounded-lg h-7">
+                    <option value="MR. ">Male</option>
+                    <option value="MME. ">Female</option>
+                </select>
+            </div>
+            <div class="p-3">
+                <label for="name" class="p-2 font-bold font-robert">Name</label>
+                <input id="eCardName" type="text" class="rounded-lg font-ubuntu h-7" placeholder="Your Name">
+
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
